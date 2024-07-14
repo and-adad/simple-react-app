@@ -17,16 +17,6 @@ root.render(
     <div>
       <h2>{cinemas[2].name}</h2>
     </div>
-    <div>
-      <h2>{cinemas[3].name}</h2>
-    </div>
-    <div>
-      <h2>{cinemas[4].name}</h2>
-    </div>
-    <div>
-      <h2>{cinemas[5].name}</h2>
-    </div>
-
   </div>
 );
 
