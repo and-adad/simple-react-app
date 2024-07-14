@@ -11,7 +11,7 @@ root.render(
       <div key={cinema.id}>
         <h2>{cinema.name}</h2>
 
-        {cinema.films.length && (
+        {cinema.films.length > 0 && (
           <div>
             <h3>Films</h3>
             {cinema.films.map((film) => (
