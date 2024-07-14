@@ -6,15 +6,23 @@ const rootElement = document.getElementById("root");
 const root = ReactDOM.createRoot(rootElement);
 
 root.render(
-  React.createElement("div", {
-    children: [
-      React.createElement("button"),
-      React.createElement("button"),
-      React.createElement("button"),
-      React.createElement("button"),
-      React.createElement("button"),
-      React.createElement("button")
-    ],
-    id: "myDiv"
-  })
+  <div id='myDiv'>
+    <button>ClickMe</button>
+    <button>ClickMe</button>
+    <button>ClickMe</button>
+    <button>ClickMe</button>
+    <button>ClickMe</button>
+  </div>
 );
+
+// React.createElement("div", {
+//   children: [
+//     React.createElement("button"),
+//     React.createElement("button"),
+//     React.createElement("button"),
+//     React.createElement("button"),
+//     React.createElement("button"),
+//     React.createElement("button")
+//   ],
+//   id: "myDiv"
+// })
