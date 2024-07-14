@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(rootElement);
 root.render(
   <div>
     {cinemas.map((cinema) => (
-        <div>
+        <div key={cinema.id}>
           <h2>{cinema.name}</h2>
         </div>
     ))}
