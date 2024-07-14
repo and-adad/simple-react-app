@@ -8,9 +8,16 @@ const root = ReactDOM.createRoot(rootElement);
 root.render(
   <div>
     {cinemas.map((cinema) => (
-        <div key={cinema.id}>
-          <h2>{cinema.name}</h2>
+      <div key={cinema.id}>
+        <h2>{cinema.name}</h2>
+        
+        <div>
+          <h3>Films</h3>
+          {cinema.films.map((film) => (
+            <div key={film.id}>{film.name}</div>
+          ))}
         </div>
+      </div>
     ))}
   </div>
 );
