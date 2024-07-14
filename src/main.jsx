@@ -11,12 +11,14 @@ root.render(
       <div key={cinema.id}>
         <h2>{cinema.name}</h2>
 
-        <div>
-          <h3>Films</h3>
-          {cinema.films.map((film) => (
-            <div key={film.id}>{film.name}</div>
-          ))}
-        </div>
+        {cinema.films.length && (
+          <div>
+            <h3>Films</h3>
+            {cinema.films.map((film) => (
+              <div key={film.id}>{film.name}</div>
+            ))}
+          </div>
+        )}
 
         <div>
           <h3>Reviews</h3>
