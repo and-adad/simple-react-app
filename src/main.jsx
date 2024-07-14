@@ -1,7 +1,8 @@
 import ReactDOM from 'react-dom/client';
+import React from 'react';
 
 const rootElement = document.getElementById("root");
 
 const root = ReactDOM.createRoot(rootElement);
 
-root.render("Hello React from main.js");
+root.render(React.createElement("div"));
