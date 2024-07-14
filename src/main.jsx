@@ -1,5 +1,4 @@
 import ReactDOM from 'react-dom/client';
-import React from 'react';
 import { cinemas } from './constants/mock';
 
 const rootElement = document.getElementById("root");
