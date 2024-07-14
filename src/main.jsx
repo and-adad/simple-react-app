@@ -8,15 +8,11 @@ const root = ReactDOM.createRoot(rootElement);
 
 root.render(
   <div>
-    <div>
-      <h2>{cinemas[0].name}</h2>
-    </div>
-    <div>
-      <h2>{cinemas[1].name}</h2>
-    </div>
-    <div>
-      <h2>{cinemas[2].name}</h2>
-    </div>
+    {cinemas.map((cinema) => (
+        <div>
+          <h2>{cinema.name}</h2>
+        </div>
+    ))}
   </div>
 );
 
