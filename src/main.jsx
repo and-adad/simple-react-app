@@ -5,4 +5,4 @@ const rootElement = document.getElementById("root");
 
 const root = ReactDOM.createRoot(rootElement);
 
-root.render(React.createElement("div", {children: "Hello from children"}));
+root.render(React.createElement("div", {children: React.createElement("button")}));
