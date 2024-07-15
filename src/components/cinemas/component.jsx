@@ -17,6 +17,7 @@ export const Cimemas = () => {
           <div>
             <h3>Reviews</h3>
             {cinema.reviews.map((review) => (
+                <div>Если более одного эл-та то будет ошибка нужно обернуть в реакт фрагмент</div>
               <div key={review.id}>{review.text}</div>
             ))}
           </div>
