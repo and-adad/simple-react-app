@@ -5,7 +5,7 @@ export const Cimemas = () => {
   return (
   <>
       {cinemas.map((cinema) => (
-        <Cinema key={cinema.id} cinema={cinema} />
+        <Cinema key={cinema.id} cinema={cinema} disabled={true} />
       ))}
   </>
   );

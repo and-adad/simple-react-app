@@ -1,4 +1,4 @@
-export const Cinema = ({ cinema }) => {
+export const Cinema = ({ cinema, disabled }) => {
   return (
     <div>
         <h2>{cinema.name}</h2>
