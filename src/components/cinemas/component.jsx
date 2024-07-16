@@ -9,15 +9,17 @@ export const Cimemas = ({ cinemas }) => {
   return (
   <>
     <div>
-      {cinemas.map((cinema) => (
-        <button key={cinema.id}>{cinema.name}</button>
+      {cinemas.map((cinema, index) => (
+        <button key={cinema.id} onClick={() => setActiveCinemaIndex(index)}>
+          {cinema.name}
+        </button>
       ))}
 
     </div>
     <Cinema key={cinema.id} cinema={cinema} />
     {/* {cinemas.map((cinema) => (
       <Cinema key={cinema.id} cinema={cinema} />
-    ))} */}
+    ))} изначально было так до того как начали делать табы*/}
   </>
   );
 };
