@@ -1,4 +1,5 @@
 import { Films } from "../films/component";
+import { NewReviewForm } from "../new-review-form/component";
 import { Reviews } from "../reviews/component";
 
 export const Cinema = ({ cinema }) => {
@@ -12,6 +13,7 @@ export const Cinema = ({ cinema }) => {
         <h2>{name}</h2>
         <Films films={films} />
         <Reviews reviews={reviews} />
+        <NewReviewForm />
     </>
   );
 };
