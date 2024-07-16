@@ -1,17 +1,17 @@
-import { useState } from "react";
+import { useCount } from "../../hooks/use-count";
 
 export const Film = ({ film }) => {
 
-  const [count, setCount] = useState(0);
+  const { count, increment, decrement } = useCount(0);
 
   return (
     <>
       <div>{film.name}</div>
       
       <div>
-        <button onClick={() => setCount(count - 1)} disabled={count === 0}>-</button>
+        <button onClick={decrement} disabled={count === 0}>-</button>
         {count}
-        <button onClick={() => setCount(count + 1)} disabled={count === 6}>+</button>
+        <button onClick={increment} disabled={count === 6}>+</button>
       </div>
     </>
   );
