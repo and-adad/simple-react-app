@@ -9,6 +9,9 @@ export const Cimemas = ({ cinemas }) => {
   return (
   <>
     <div>
+      {cinemas.map((cinema) => (
+        <button key={cinema.id}>{cinema.name}</button>
+      ))}
 
     </div>
     <Cinema key={cinema.id} cinema={cinema} />
