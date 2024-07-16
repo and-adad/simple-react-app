@@ -9,7 +9,11 @@ export const Cimemas = ({ cinemas }) => {
   
   return (
   <>
-    <CinemaTabs cinemas={cinemas} onClick={setActiveCinemaIndex} />
+    <CinemaTabs
+      cinemas={cinemas}
+      onClick={setActiveCinemaIndex}
+      activeIndex={activeCinemaIndex}
+    />
     <Cinema key={cinema.id} cinema={cinema} />
   </>
   );
