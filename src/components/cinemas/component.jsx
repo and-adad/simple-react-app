@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Cinema } from "../cinema/component";
+import { CinemaTabs } from "../cinema-tabs/component";
 
 export const Cimemas = ({ cinemas }) => {
 
@@ -8,18 +9,8 @@ export const Cimemas = ({ cinemas }) => {
   
   return (
   <>
-    <div>
-      {cinemas.map((cinema, index) => (
-        <button key={cinema.id} onClick={() => setActiveCinemaIndex(index)}>
-          {cinema.name}
-        </button>
-      ))}
-
-    </div>
+    <CinemaTabs cinemas={cinemas} onClick={setActiveCinemaIndex} />
     <Cinema key={cinema.id} cinema={cinema} />
-    {/* {cinemas.map((cinema) => (
-      <Cinema key={cinema.id} cinema={cinema} />
-    ))} изначально было так до того как начали делать табы*/}
   </>
   );
 };
