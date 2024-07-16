@@ -22,7 +22,6 @@ const reducer = (state, {type, payload}) => {
 
 export const NewReviewForm = () => {
   const [form, dispatch] = useReducer(reducer, initialValue);
-  console.log(form);
   
   return (
     <>
@@ -34,11 +33,15 @@ export const NewReviewForm = () => {
       </div>
       <div>
         <label htmlFor="text">Text: </label>
-        <input type="text" id="text" name="text" value={form.text} />
+        <input type="text" id="text" name="text" value={form.text}
+          onChange={(event) => dispatch({ type: "setText", payload: event.target.value })}
+        />
       </div>
       <div>
         <label htmlFor="rating">Rating: </label>
-        <input type="number" id="rating" name="rating"value={form.rating} />
+        <input type="number" id="rating" name="rating" value={form.rating}
+          onChange={(event) => dispatch({ type: "setRating", payload: event.target.value })}
+        />
       </div>
     </>
   );
