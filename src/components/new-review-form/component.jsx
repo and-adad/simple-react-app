@@ -23,7 +23,7 @@ const reducer = (state, {type, payload}) => {
 
 export const NewReviewForm = () => {
   const [form, dispatch] = useReducer(reducer, initialValue);
-  const ref =  useRef();
+  const ref =  useRef(1);
   console.log(ref);
   
   return (
