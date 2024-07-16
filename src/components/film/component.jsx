@@ -1,8 +1,18 @@
+import { useEffect } from "react";
 import { useCount } from "../../hooks/use-count";
 
 export const Film = ({ film }) => {
 
-  const { count, increment, decrement } = useCount(0);
+  const { count, increment, decrement } = useCount();
+
+  useEffect(() => {
+    const callback =  () => console.log("Гляди в консоль - 3 вывода там, а если поскролишь то их количество увеличится");
+    window.addEventListener("scroll", callback);
+
+    return () => {
+      window.removeEventListener("scroll", callback);
+    };
+  }, []);
 
   return (
     <>
