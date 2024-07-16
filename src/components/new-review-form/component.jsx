@@ -1,4 +1,5 @@
 import { useReducer } from "react";
+import { Rating } from "../rating/component";
 
 const initialValue = {
   name: 'Андрей',
@@ -38,10 +39,11 @@ export const NewReviewForm = () => {
         />
       </div>
       <div>
-        <label htmlFor="rating">Rating: </label>
+        <Rating />
+        {/* <label htmlFor="rating">Rating: </label>
         <input type="number" id="rating" name="rating" value={form.rating}
           onChange={(event) => dispatch({ type: "setRating", payload: event.target.value })}
-        />
+        /> */}
       </div>
     </>
   );
