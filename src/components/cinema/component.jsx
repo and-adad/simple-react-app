@@ -3,6 +3,10 @@ import { Reviews } from "../reviews/component";
 
 export const Cinema = ({ cinema }) => {
     const {name, films, reviews} = cinema;
+
+    
+
+
   return (
     <>
         <h2>{name}</h2>

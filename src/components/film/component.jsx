@@ -1,3 +1,18 @@
+import { useState } from "react";
+
 export const Film = ({ film }) => {
-  return <div>{film.name}</div>;
+
+  useState();
+
+  return (
+    <>
+      <div>{film.name}</div>
+      
+      <div>
+        <button>-</button>
+        0
+        <button>+</button>
+      </div>
+    </>
+  );
 };
