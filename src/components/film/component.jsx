@@ -4,6 +4,10 @@ export const Film = ({ film }) => {
 
   const [count, setCount] = useState(0);
 
+  if (!film) {
+    return null;
+  }
+
   return (
     <>
       <div>{film.name}</div>
