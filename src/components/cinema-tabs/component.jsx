@@ -1,10 +1,12 @@
+import { Tab } from "../tab/component";
+
 export const CinemaTabs = ({ cinemas, onClick }) => {
   return (
     <>
       {cinemas.map((cinema, index) => (
-        <button key={cinema.id} onClick={() => onClick(index)}>
+        <Tab key={cinema.id} onClick={() => onClick(index)}>
           {cinema.name}
-        </button>
+        </Tab>
       ))}
     </>
   );
