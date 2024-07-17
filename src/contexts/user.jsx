@@ -1,12 +1,12 @@
 import React, { useContext, useMemo, useState } from "react";
 
-const UserContext = React.createContext();
+const UserContext = React.createContext(null);
 
 export const useUserContext = () => {
   return useContext(UserContext);
 };
 
-export const UserContextProvider = ({ children }) => {
+export const UserContextProvider = ({children}) => {
   const [user, setUser] = useState();
 
   const contextValue = useMemo(
@@ -20,5 +20,7 @@ export const UserContextProvider = ({ children }) => {
     [user]
   );
 
-  return <UserContext.Provider value={{contextValue}}>{children}</UserContext.Provider>;
+  return (
+    <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>
+);
 };

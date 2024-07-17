@@ -5,14 +5,7 @@ export const Film = ({ film }) => {
 
   const { count, increment, decrement } = useCount();
 
-  useEffect(() => {
-    const callback =  () => console.log("");
-    window.addEventListener("scroll", callback);
 
-    return () => {
-      window.removeEventListener("scroll", callback);
-    };
-  }, []);
 
   return (
     <>

@@ -5,12 +5,10 @@ import { UserContextProvider } from "./contexts/user";
 
 export function App () {
   return (
-    
     <UserContextProvider>
       <Layout>
         <Cimemas cinemas={cinemas} />
       </Layout>
     </UserContextProvider>
-  
 );
 }
