@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useReducer, useRef } from "react";
+import { useReducer } from "react";
 import { Rating } from "../rating/component";
 
 const initialValue = {
@@ -23,13 +23,10 @@ const reducer = (state, {type, payload}) => {
 
 export const NewReviewForm = () => {
   const [form, dispatch] = useReducer(reducer, initialValue);
-  const onRender = useCallback((element) => {
-    console.log(element);
-  }, []);
   
   return (
     <>
-      <div ref={onRender}>
+      <div>
         <label htmlFor="name">Name: </label>
         <input type="text" id="name" name="name" value={form.name}
           onChange={(event) => dispatch({ type: "setName", payload: event.target.value })}
