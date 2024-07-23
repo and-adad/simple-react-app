@@ -5,7 +5,7 @@ const initialValue = {
   name: 'Андрей',
   text: "TheBest",
   rating: 5
-}
+};
 
 const reducer = (state, {type, payload}) => {
   switch (type) {
@@ -21,11 +21,11 @@ const reducer = (state, {type, payload}) => {
   }
 };
 
-export const NewReviewForm = () => {
+export const NewReviewForm = ({ className }) => {
   const [form, dispatch] = useReducer(reducer, initialValue);
   
   return (
-    <>
+    <div className={className}>
       <div>
         <label htmlFor="name">Name: </label>
         <input type="text" id="name" name="name" value={form.name}
@@ -43,6 +43,6 @@ export const NewReviewForm = () => {
           onChange={(rating) => dispatch({ type: "setRating", payload: rating })}
         />
       </div>
-    </>
+    </div>
   );
 };

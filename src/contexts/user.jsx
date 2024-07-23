@@ -1,4 +1,7 @@
-import React, { useContext, useMemo, useState } from "react";
+import React from "react";
+import { useMemo } from "react";
+import { useState } from "react";
+import { useContext } from "react";
 
 const UserContext = React.createContext(null);
 
@@ -22,5 +25,5 @@ export const UserContextProvider = ({children}) => {
 
   return (
     <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>
-);
+  );
 };

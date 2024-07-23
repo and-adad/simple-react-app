@@ -1,3 +1,5 @@
+import { Header } from "../header/component";
+
 export const Layout = ({ children }) => {
   return (
     <>
