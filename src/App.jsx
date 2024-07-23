@@ -1,14 +1,14 @@
-import { Cimemas } from "./components/cinemas/component";
-import { cinemas } from "./constants/mock";
+import { Cinemas } from "./components/cinemas/component";
 import { Layout } from "./components/layout/component";
+import { cinemas } from "./constants/mock";
 import { UserContextProvider } from "./contexts/user";
 
-export function App () {
+export function App() {
   return (
     <UserContextProvider>
       <Layout>
-        <Cimemas cinemas={cinemas} />
+        <Cinemas cinemas={cinemas} />
       </Layout>
     </UserContextProvider>
-);
+  );
 }

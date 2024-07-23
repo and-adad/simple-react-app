@@ -2,19 +2,19 @@ import { useState } from "react";
 import { Cinema } from "../cinema/component";
 import { CinemaTabs } from "../cinema-tabs/component";
 
-export const Cimemas = ({ cinemas }) => {
+export const Cinemas = ({ cinemas }) => {
+  const [activeCinemaIndex, setActiveCinemaIndex] = useState(0);
 
-    const [activeCinemaIndex, setActiveCinemaIndex] = useState(0);
-    const cinema = cinemas[activeCinemaIndex];
-  
+  const cinema = cinemas[activeCinemaIndex];
+
   return (
-  <>
-    <CinemaTabs
-      cinemas={cinemas}
-      onClick={setActiveCinemaIndex}
-      activeIndex={activeCinemaIndex}
-    />
-    <Cinema key={cinema.id} cinema={cinema} />
-  </>
+    <div>
+      <CinemaTabs
+        cinemas={cinemas}
+        onClick={setActiveCinemaIndex}
+        activeIndex={activeCinemaIndex}
+      />
+      <Cinema key={cinema.id} cinema={cinema} />
+    </div>
   );
 };

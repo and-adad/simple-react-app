@@ -9,7 +9,7 @@ export const useUserContext = () => {
   return useContext(UserContext);
 };
 
-export const UserContextProvider = ({children}) => {
+export const UserContextProvider = ({ children }) => {
   const [user, setUser] = useState();
 
   const contextValue = useMemo(
@@ -18,7 +18,7 @@ export const UserContextProvider = ({children}) => {
       login: setUser,
       logout: () => {
         setUser(null);
-        },
+      },
     }),
     [user]
   );

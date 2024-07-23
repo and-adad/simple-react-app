@@ -2,10 +2,10 @@ import { Header } from "../header/component";
 
 export const Layout = ({ children }) => {
   return (
-    <>
+    <div>
       <Header />
       <main>{children}</main>
-      <footer>Footer</footer>
-    </>
+      <footer>footer</footer>
+    </div>
   );
 };
